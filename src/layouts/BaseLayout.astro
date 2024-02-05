@@ -1,0 +1,74 @@
+---
+import { getI18N } from '@i18n/i18n.ts'
+
+const { currentLocale }  = Astro
+
+const I18N = getI18N({ currentLocale })
+---
+
+<html lang={currentLocale}>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/logo-club.png" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{I18N?.AppTitle}</title>
+	</head>
+	<body>
+		<slot />
+		<div class="absolute top-0 z-[-2] h-screen w-screen bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px]"></div>
+	</body>
+</html>
+
+<style is:global>
+
+	:root {
+		color-scheme: dark;
+		--dark: #141414;
+		--light: #f1eeee;
+		--primary: #edb91c;
+		--primary_dark: #CFA116;
+		--secondary: #7AFC16;
+		--secondary_dark: #61C216;
+	}
+
+	/****** GENERIC STYLES ******/
+	h1, h2, h3, h4, h5, h6 {
+		font-family: "Bungee", sans-serif;
+		color: var(--primary);
+	}
+	p, a {
+		font-family: "Bungee", sans-serif;
+		color: var(--light);
+	}
+
+	/****** TIPOGRAPHY ******/
+	@font-face {
+		font-family: "Bungee";
+		src: url("../assets/fonts/Bungee/Bungee-regular.woff2") format('woff2');
+		font-weight: 400;
+		font-style: normal;
+		font-display: swap;
+	}
+	@font-face {
+		font-family: "Kanit";
+		src: url("../assets/fonts/Kanit/Kanit-light.woff2") format('woff2');
+		font-weight: 300;
+		font-style: normal;
+		font-display: swap;
+	}
+	@font-face {
+		font-family: "Kanit";
+		src: url("../assets/fonts/Kanit/Kanit-medium.woff2") format('woff2');
+		font-weight: 500;
+		font-style: normal;
+		font-display: swap;
+	}
+	@font-face {
+		font-family: "Kanit";
+		src: url("../assets/fonts/Kanit/Kanit-semibold.woff2") format('woff2');
+		font-weight: 600;
+		font-style: normal;
+		font-display: swap;
+	}
+</style>
