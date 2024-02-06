@@ -1,3 +1,10 @@
 {
-    "AppTitle": "Club de negocios | Community"
+    "AppTitle": "Club de negocios | Community",
+    "Navbar_Offer": "What we offer",
+    "Navbar_SuccessStories": "Success stories",
+    "Navbar_Testimonials": "Testimonials",
+    "Navbar_WhyUs": "Why us",
+    "Navbar_WhoWeAre": "Who we are",
+    "Navbar_Pricing": "Pricing",
+    "Navbar_Questions": "Questions"
 }

@@ -23,6 +23,8 @@
         link.addEventListener('click', () => {
             if (navbar?.classList.contains('navbar_open')) {
                 navbar.classList.replace('navbar_open', 'hidden')
+                const navbutton = document.getElementById("navbutton") as HTMLInputElement
+                navbutton.checked = false
             }
         })
     })
