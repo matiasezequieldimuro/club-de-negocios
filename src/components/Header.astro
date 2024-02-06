@@ -8,24 +8,32 @@ import { getI18N } from "@i18n/i18n";
 const { currentLocale }  = Astro
 const I18N = getI18N({ currentLocale })
 
+// const LINKS = [
+//     { label: I18N?.Navbar_Offer, linkTo: 'Offer'},
+//     I18N?.Navbar_SuccessStories,
+//     I18N?.Navbar_Testimonials,
+//     I18N?.Navbar_WhyUs,
+//     I18N?.Navbar_WhoWeAre,
+//     I18N?.Navbar_Pricing,
+//     I18N?.Navbar_Questions
+// ]
 const LINKS = [
-    I18N?.Navbar_Offer,
-    I18N?.Navbar_SuccessStories,
-    I18N?.Navbar_Testimonials,
-    I18N?.Navbar_WhyUs,
-    I18N?.Navbar_WhoWeAre,
-    I18N?.Navbar_Pricing,
-    I18N?.Navbar_Questions
+    { label: I18N?.Navbar_Offer, linkTo: 'Offer'},
+    { label: I18N?.Navbar_SuccessStories, linkTo: 'SuccessStories'},
+    { label: I18N?.Navbar_Testimonials, linkTo: 'Testimonials'},
+    { label: I18N?.Navbar_WhyUs, linkTo: 'WhyUs'},
+    { label: I18N?.Navbar_WhoWeAre, linkTo: 'WhoWeAre'},
+    { label: I18N?.Navbar_Pricing, linkTo: 'Pricing'},
+    { label: I18N?.Navbar_Questions, linkTo: 'Questions'},
 ]
 ---
 
-<header class="navbar_scrolled fixed w-full px-[2rem] py-[.7rem] flex justify-between items-center 
-    ">
-    <a href="#">
+<header class="navbar_scrolled fixed w-full px-[2rem] py-[.7rem] flex justify-between items-center z-50">
+    <a href="#Hero">
         <Image src={BannerClub} width={150} height={100} alt="Logo" />
     </a>
     <nav id="navbar" class="hidden xl:flex xl:justify-end xl:gap-3 ">
-        {LINKS.map(link => <Link label={link}/>)}
+        {LINKS.map(link => <Link label={link.label} linkTo={link.linkTo}/>)}
     </nav>
     <NavButton/>
 </header>
@@ -56,8 +64,8 @@ const LINKS = [
     }
     @keyframes blur {
         to {
-            background-color: #232323d2;
-            box-shadow: inset 0px 0px 36px 5px rgba(207, 161, 22, 0.925);
+            background-color: #000000;
+            /* box-shadow: inset 0px 0px 36px 5px rgba(143, 110, 11, 0.26); */
         }
     }
 
