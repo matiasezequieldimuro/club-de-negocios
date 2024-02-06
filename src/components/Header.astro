@@ -1,0 +1,80 @@
+---
+import { Image } from "astro:assets";
+import Link from "@components/Link.astro"
+import NavButton from "@components/NavButton.astro"
+import BannerClub from "@assets/images/banner-club.webp"
+
+const LINKS = [
+    "Principal",
+    "Que ofrecemos",
+    "Casos de éxito",
+    "Testimonios",
+    "Por qué nosotros",
+    "Quiénes somos",
+    "Precios",
+    "Preguntas"
+]
+---
+
+<header class="navbar_scrolled fixed w-full px-[2rem] py-[.7rem] flex justify-between items-center 
+    ">
+    <a href="#">
+        <Image src={BannerClub} width={150} height={100} alt="Logo" />
+    </a>
+    <nav id="navbar" class="hidden xl:flex xl:justify-end xl:gap-3 ">
+        {LINKS.map(link => <Link label={link}/>)}
+    </nav>
+    <NavButton/>
+</header>
+
+<script>
+    const btn = document.getElementById("navbutton");
+    const navbar = document.getElementById("navbar")
+    btn?.addEventListener('click', () => {
+        navbar?.classList.toggle('hidden')
+        navbar?.classList.toggle('navbar_open')
+    })    
+</script>
+
+<style is:global>
+
+    .navbar_scrolled {
+        animation: blur linear both;
+        animation-timeline: scroll();
+        animation-range: 0 80px;
+    }
+    @keyframes blur {
+        to {
+            background-color: #232323d2;
+            box-shadow: inset 0px 0px 36px 5px rgba(207, 161, 22, 0.925);
+        }
+    }
+
+    .navbar_open {
+        position: fixed;
+        top: 0dvh;
+        width: 100dvw;
+        height: 100dvh;
+        margin-inline: -2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+        /* background-color: var(--dark); */
+        background: rgb(89,78,41);
+background: linear-gradient(0deg, rgba(89,78,41,1) 0%, rgba(64,57,36,1) 0%, rgba(20,20,20,1) 100%);
+        animation: slide .3s ease-in-out;
+    }
+    .navbar_open a {
+        font-size: 1.3rem;
+    }
+    @keyframes slide {
+        from {
+            top: -100dvh;
+        }
+        to {
+            top: 0;
+        }
+    }
+</style>
