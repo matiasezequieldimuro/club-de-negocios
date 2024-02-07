@@ -1,9 +1,38 @@
 ---
 import FullScreenSectionLayout from "@layouts/FullScreenSectionLayout.astro";
-
 ---
 <FullScreenSectionLayout>
-    <div id="Hero" class="relative w-full h-full">
+    <div id="Hero" class="
+        relative w-full h-full px-[2rem] flex flex-col gap-[10dvh] justify-center items-center
+        md:px-0 
+        xl:px-3  xl:gap-0 xl:flex-row xl:items-center xl:justify-around">
+
+        <article class="text-center flex flex-col gap-5">
+            <h1 class="text-4xl md:text-5xl xl:text-6xl select-none">Club de <span class="text-white">Negocios</span></h1>
+            <p class="text-[0.9rem] font-light max-w-[500px] 
+                sm:text-[1rem] 
+                md:max-w-[700px]
+                lg:text-lg lg:max-w-[650px] 
+                xl:max-w-[550px]"
+            >
+                Te introducimos a la Comunidad que te va a enseñar las estrategias de marketing, ventas, creación de contenido y negocios que te van a llevar a ganar <span class="text-primary">más de $1000 USD al mes, sin años de experiencia, título universitario o miles de seguidores.</span>
+            </p>
+        </article>
+
+        <article class="w-[375px] md:w-[500px]">
+            <lite-youtube 
+                autoload
+                posterquality="maxresdefault"
+                videoid="jIsBnnm8lpI" 
+                videotitle="Video del programa">
+                <a href="https://www.youtube.com/watch?v=jIsBnnm8lpI&t=544s">Mirar en youtube:</a>
+            </lite-youtube>
+        </article>
+
         <div class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_60%,#CFA116_100%)]"></div>
     </div>
 </FullScreenSectionLayout>
+
+<script>
+    import '@justinribeiro/lite-youtube';
+</script>
