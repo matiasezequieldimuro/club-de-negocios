@@ -4,8 +4,9 @@ import Button from "@components/Button.astro";
 ---
 <FullScreenSectionLayout>
     <div id="Hero" class="
-        relative w-full h-full px-[2rem] flex flex-col gap-[10dvh] justify-center items-center
+        relative w-full min-h-full h-auto pt-[85px] px-[2rem] flex flex-col gap-[10dvh] justify-center items-center
         md:px-0 
+        lg:pt-0
         xl:px-3  xl:gap-0 xl:flex-row xl:items-center xl:justify-around">
 
         <article class="text-center flex flex-col items-center gap-5">
@@ -21,7 +22,7 @@ import Button from "@components/Button.astro";
             <Button text="Ingresar al club" linkTo="#" />
         </article>
 
-        <article class="w-[375px] md:w-[500px]">
+        <article class="w-[330px] sm:w-[375px] md:w-[500px]">
             <lite-youtube 
                 autoload
                 posterquality="maxresdefault"
