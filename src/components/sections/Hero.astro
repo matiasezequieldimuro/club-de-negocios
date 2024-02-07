@@ -1,5 +1,6 @@
 ---
 import FullScreenSectionLayout from "@layouts/FullScreenSectionLayout.astro";
+import Button from "@components/Button.astro";
 ---
 <FullScreenSectionLayout>
     <div id="Hero" class="
@@ -7,7 +8,7 @@ import FullScreenSectionLayout from "@layouts/FullScreenSectionLayout.astro";
         md:px-0 
         xl:px-3  xl:gap-0 xl:flex-row xl:items-center xl:justify-around">
 
-        <article class="text-center flex flex-col gap-5">
+        <article class="text-center flex flex-col items-center gap-5">
             <h1 class="text-4xl md:text-5xl xl:text-6xl select-none">Club de <span class="text-white">Negocios</span></h1>
             <p class="text-[0.9rem] font-light max-w-[500px] 
                 sm:text-[1rem] 
@@ -17,6 +18,7 @@ import FullScreenSectionLayout from "@layouts/FullScreenSectionLayout.astro";
             >
                 Te introducimos a la Comunidad que te va a enseñar las estrategias de marketing, ventas, creación de contenido y negocios que te van a llevar a ganar <span class="text-primary">más de $1000 USD al mes, sin años de experiencia, título universitario o miles de seguidores.</span>
             </p>
+            <Button text="Ingresar al club" linkTo="#" />
         </article>
 
         <article class="w-[375px] md:w-[500px]">

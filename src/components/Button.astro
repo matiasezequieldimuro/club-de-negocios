@@ -1,0 +1,14 @@
+---
+const { text = 'Click Here  ', linkTo = '#', target = '_self' } = Astro.props
+---
+
+<a 
+    href={linkTo} target={target} 
+    class="
+        inline-block w-fit px-3 py-1 text-md font-light rounded-lg bg-secondary_dark 
+        md:px-5 md:py-2 md:text-lg
+        hover:shadow-[0px_0px_10px_2px_#7AFC16] transition-shadow ease-out duration-150
+        active:-translate-y-1 active:transition-transform"
+>
+    {text}
+</a>
