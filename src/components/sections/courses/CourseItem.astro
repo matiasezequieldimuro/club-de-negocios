@@ -1,0 +1,43 @@
+---
+import Paragraph from "@components/Paragraph.astro"
+
+const { heading, text } = Astro.props
+---
+
+<li class="ApplicationsBox-List-Item">
+    <details class="overflow-hidden rounded-lg bg-dark">
+        <summary class="relative block p-3 cursor-pointer">
+            <Paragraph>
+                {heading}
+            </Paragraph>
+        </summary>
+        <section class="ApplicationsBox-List-Item-ContentBox">
+            <article class="p-[1rem] text-pretty">
+                <Paragraph isSmall={true}>
+                    {text}
+                </Paragraph>
+            </article>
+        </section>
+    </details>
+</li>
+
+
+<style>
+
+.ApplicationsBox-List-Item summary:before {
+    content: '';
+    border-width: .4rem;
+    border-style: solid;
+    border-color: transparent transparent transparent #fff;
+    position: absolute;
+    top: 1.3rem;
+    right: 1rem;
+    transform: rotate(90deg);
+    transform-origin: .2rem 50%;
+    transition: .25s transform ease;
+}
+/* THE MAGIC 🧙‍♀️ */
+.ApplicationsBox-List-Item details[open] > summary:before {
+    transform: rotate(270deg);
+}
+</style>

@@ -1,0 +1,9 @@
+---
+import { Image } from "astro:assets"
+const { photo, photoAlt } = Astro.props
+---
+<Image
+    src={photo}
+    alt={photoAlt}
+    class="w-full h-full object-cover object-center group-hover:scale-110 transition-scale duration-500 ease-in-out"
+/>

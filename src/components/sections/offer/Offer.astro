@@ -1,0 +1,113 @@
+---
+import FullScreenSectionLayout from "@layouts/FullScreenSectionLayout.astro";
+import Paragraph from "@components/Paragraph.astro";
+import ClientesImage from '@assets/images/clientes.webp'
+import IngresosImage from '@assets/images/ingresos.webp'
+import MktImage from '@assets/images/mkt.webp'
+import VentasImage from '@assets/images/cierre-ventas.webp'
+import Heading from "@components/Heading.astro";
+import SkillsArticle from "./SkillsArticle.astro";
+import SkillsImage from "./SkillsImage.astro";
+import PortalCircle from "@components/icons/PortalCircle.astro";
+import Discord from "@components/icons/Discord.astro";
+import Courses from "../courses/Courses.astro";
+
+---
+<FullScreenSectionLayout>
+
+    <div id="Offer" class="w-full max-w-[1920px] py-[3rem] px-[2rem] sm:px-[4rem] flex flex-col gap-[2.5rem]">
+        <Heading level="h2" styles="mx-auto px-8 text-center">
+            Qué ofrecemos
+        </Heading>
+
+        <section class="grid grid-cols-1 gap-[3rem]">
+
+            <article class="flex flex-col gap-[2.5rem]">
+                <Heading level="h3" styles="mx-auto px-8 text-center text-white">
+                    Habilidades de alto valor
+                </Heading>
+                <section class="grow grid grid-cols-5 gap-3">
+                    <SkillsArticle grow={false}>
+                        <SkillsImage slot="skills-image" photo={MktImage} photoAlt="Marketing y creación de ofertas"/>
+                        <Heading slot="skills-title" level="h4" styles="text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-balance">
+                            Marketing y Creación de Ofertas
+                        </Heading>
+                        <Paragraph slot="skills-desc">
+                            Te enseñamos a empaquetar tu oferta para que al ofrecer tu servicio, sea muy dificil que tus potenciales clientes te digan que no.
+                        </Paragraph>
+                    </SkillsArticle>
+                    <SkillsArticle grow={true}>
+                        <SkillsImage slot="skills-image" photo={ClientesImage} photoAlt="Adquisición de clientes"/>
+                        <Heading slot="skills-title" level="h4" styles="text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+                            Habilidades de Altos Ingresos
+                        </Heading>
+                        <Paragraph slot="skills-desc">
+                            Vas a aprender las habilidades más demandadas del mercado. Habilidades que te van a permitir generar tus primeros ingresos, y una vez que ya estés instaurado en el mercado, miles de dólares.
+                        </Paragraph>
+                    </SkillsArticle>
+                    <SkillsArticle grow={false}>
+                        <SkillsImage slot="skills-image" photo={IngresosImage} photoAlt="Habilidades de altos ingresos"/>
+                        <Heading slot="skills-title" level="h4" styles="text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.9)] ">
+                            Adquisición de Clientes
+                        </Heading>
+                        <Paragraph slot="skills-desc">
+                            Aprende como buscar potenciales clientes que quieran comprar tus servicios, las mejores técnicas para captar su atención, y finalmente para hacer que te paguen.
+                        </Paragraph>
+                    </SkillsArticle>
+                    <SkillsArticle grow={true}>
+                        <SkillsImage slot="skills-image" photo={VentasImage} photoAlt="Cierre de ventas"/>
+                        <Heading slot="skills-title" level="h4" styles="text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+                            Cierre de Ventas
+                        </Heading>
+                        <Paragraph slot="skills-desc">
+                            Siempre que ofrezcas un servicio caro, tienes que entender lo siguiente: las llamadas de venta van a ser indispensables para cerrar este tipo de ventas. Y por ello, es fundamental que entiendas cómo debes plantearte en una llamada, y qué técnicas debes utilizar para cerrarlas.
+                        </Paragraph>
+                    </SkillsArticle>
+                </section>
+            </article>
+
+            <div class="flex flex-col xl:flex-row justify-start gap-[2rem]">
+
+                <article class="grow flex flex-col gap-3">
+                    <Heading level="h3" styles="mx-auto px-8 text-center text-white">
+                        Comunidad
+                    </Heading>
+                    <div class="text-center">
+                        <Paragraph>
+                            No todo se trata de dinero, por eso estamos en <span class="text-primary">comunidad</span>.
+                        </Paragraph>
+                        <Paragraph>
+                            En la misma fomentamos el desarrollo tanto <span class="text-primary">financiero</span> como <span class="text-primary">personal</span> de todos los miembros, y los preparamos para tener una <span class="text-primary">mentalidad inquebrantable</span>, <span class="text-primary">abundante</span>, y preparada para lo que sea.
+                        </Paragraph>
+                    </div>
+                </article>   
+
+                <article class="grow flex flex-col gap-3">
+                    <Heading level="h3" styles="mx-auto px-8 text-center text-white">
+                        Accesos
+                    </Heading>
+                    <section class="grid grid-cols-1 gap-3">
+                        <article class="flex gap-5">
+                            <PortalCircle />
+                            <div class="flex flex-col text-pretty">
+                                <Paragraph styles="font-normal text-primary_dark">Portal Circle</Paragraph>
+                                <Paragraph>En el que tendrás el acceso total a todos los cursos, los portales de discusiones, desafíos, mucho más dentro de la Comunidad.</Paragraph>
+                            </div>
+                        </article>
+                        <article class="flex gap-5">
+                            <Discord/>
+                            <div class="flex flex-col text-pretty">
+                                <Paragraph styles="font-normal text-primary_dark">Servidor de Discord</Paragraph>
+                                <Paragraph>Un Servidor en el cual te vas a encontrar con todos los miembros de la Comunidad, para resolver todas tus consultas, dudas, obtener claridad, hacer amigos, socios, o para lo que sea que necesites.</Paragraph>
+                            </div>
+                        </article>
+                    </section>
+                </article>  
+
+            </div>
+
+        </section>
+    </div>
+
+    <div class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(300%_140%_at_50%_0%,#000_60%,#CFA116_100%)]"></div>
+</FullScreenSectionLayout>

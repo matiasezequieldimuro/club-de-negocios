@@ -1,0 +1,27 @@
+---
+import CourseItem from "@components/sections/courses/CourseItem.astro";
+import Heading from "@components/Heading.astro";
+
+const COURSES = [
+    { heading: "Ofertas del 1%", text: "Un paso a paso de cómo crear una oferta, qué deben tener en cuenta a la hora de estructurarla, y cómo venderla a más de $500 USD." },
+    { heading: "Marketing a Prueba de Novatos", text: "Aprende a crear Embudos de Venta, tanto para atraer orgánicamente a tus cleintes (en caso que crees contenido y estés creando una audiencia), como para ir a buscar a una audiencia fría que pueda estar interesada en tu producto o servicio." },
+    { heading: "Edición de Videos para Viralizar", text: "Una guía completa de cómo editar videos como un profesional, paso a paso, para que puedas ofrecer tus redes en redes sociales y trabajar con creadores de contenido interesados en ellos." },
+    { heading: "Copywriting Persuasivo", text: "Cómo escribir de manera persuasiva para captar la atención de las masas y convertir palabras en clientes." },
+    { heading: "Maestría en Diseño Gráfico", text: "Aprende a utilizar herramientas como Photoshop o Midjourney para hacerte un experto en diseños de todo tipo, y así ofrecer tus servicios de Branding a marcas personales y empresariales." },
+    { heading: "Instagram y Clientes", text: "Aprende a convertir seguidores, mensajes, y conversaciones en dinero, con nuestros métodos de adquisición de clientes por medio de Instagram." },
+    { heading: "Conexión y Conversión en Linkedin", text: "Aprende a crear un perfil exitoso, a crear listados con potenciales clientes que quieran adquirir tus servicios, y a ofrecerlo de la forma más efectiva posible." },
+    { heading: "Arte de Cierre de Ventas", text: "Entiende la psicología de la venta, los aspectos a tener en cuenta a la hora de vender y de subirte a una llamada de ventas, y cómo saltar objeciones como un maestro para cerrar la mayor cantidad de ventas posibles." }
+]
+---
+<article class="relative flex flex-col gap-10 px-[3rem] py-[2rem]">
+    <Heading level="h3" styles="mx-auto px-8 text-center text-white">
+        Cursos
+    </Heading>
+    <ul class="grid grid-cols-2 gap-5">
+        {
+            COURSES.map(course => <CourseItem heading={course.heading} text={course.text} />)
+        }
+    </ul>
+    <div class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(300%_140%_at_50%_0%,#000_60%,#CFA116_100%)]
+    rotate-180"></div>
+</article>   

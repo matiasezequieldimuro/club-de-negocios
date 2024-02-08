@@ -1,0 +1,24 @@
+<article class={`
+    group relative h-[300px] rounded col-span-5 ${Astro.props.grow ? 'md:col-span-3' : 'md:col-span-2'} 
+    overflow-hidden cursor-pointer
+`}>
+    <slot name="skills-image"/>
+    
+    <div class="
+        absolute top-0 left-0 translate-y-full 
+        group-hover:-translate-y-0 transition-transform duration-500
+        w-full h-full px-[2rem] py-[1rem] flex flex-col justify-end items-start gap-4 text-pretty z-40">
+        <slot name="skills-title"/>
+        <slot name="skills-desc" />
+    </div>
+    <div class="
+        absolute bottom-0 left-0 w-full h-full translate-y-full z-30 
+        group-hover:-translate-y-0 transition-transform duration-500
+        bg-gradient-to-b from-transparent via-40% via-neutral-800/60 to-90% to-neutral-900/90"
+    ></div>
+    <!-- <div class="
+        absolute top-0 left-0 w-full h-full px-[2rem] py-[1rem] flex items-center justify-center z-40
+        group-hover:-translate-y-8 transition-transform duration-300">
+        <slot name="skills-title"/>
+    </div> -->
+</article>
