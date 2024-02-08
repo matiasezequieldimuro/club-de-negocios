@@ -1,18 +1,21 @@
 ---
 import Paragraph from "@components/Paragraph.astro"
 
-const { heading, text } = Astro.props
+const { heading, text} = Astro.props
 ---
 
-<li class="ApplicationsBox-List-Item">
-    <details class="overflow-hidden rounded-lg bg-dark">
-        <summary class="relative block p-3 cursor-pointer">
-            <Paragraph>
+<li class="ApplicationsBox-List-Item group">
+    <details class="
+        overflow-hidden rounded-lg bg-dark 
+        group-hover:shadow-[0px_0px_10px_2px_#CFA116] transition-shadow ease-out duration-150">
+        <summary class="relative flex items-center gap-3 p-3 cursor-pointer">
+            <slot/>
+            <Paragraph styles="">
                 {heading}
             </Paragraph>
         </summary>
         <section class="ApplicationsBox-List-Item-ContentBox">
-            <article class="p-[1rem] text-pretty">
+            <article class="p-[1rem] pt-1 text-pretty">
                 <Paragraph isSmall={true}>
                     {text}
                 </Paragraph>

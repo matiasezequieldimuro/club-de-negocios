@@ -1,6 +1,14 @@
 ---
 import CourseItem from "@components/sections/courses/CourseItem.astro";
 import Heading from "@components/Heading.astro";
+import OfferIcon from "@components/icons/courses/Offer.astro"
+import VideoIcon from "@components/icons/courses/Video.astro"
+import GraphicDesignIcon from "@components/icons/courses/GraphicDesign.astro"
+import LinkedinIcon from "@components/icons/courses/Linkedin.astro"
+import MktIcon from "@components/icons/courses/Mkt.astro"
+import CopywritingIcon from "@components/icons/courses/Copywriting.astro"
+import IgIcon from "@components/icons/courses/Ig.astro"
+import SalesIcon from "@components/icons/courses/Ig.astro"
 
 const COURSES = [
     { heading: "Ofertas del 1%", text: "Un paso a paso de cómo crear una oferta, qué deben tener en cuenta a la hora de estructurarla, y cómo venderla a más de $500 USD." },
@@ -17,9 +25,29 @@ const COURSES = [
     <Heading level="h3" styles="mx-auto px-8 text-center text-white">
         Cursos
     </Heading>
-    <ul class="grid grid-cols-2 gap-5">
+    <ul class="grid grid-cols-1 md:grid-cols-2 gap-5">
         {
-            COURSES.map(course => <CourseItem heading={course.heading} text={course.text} />)
+            COURSES.map(course => (
+                <CourseItem heading={course.heading} text={course.text}>
+                    {
+                        (course.heading == "Ofertas del 1%")
+                        ? <OfferIcon/>
+                        : (course.heading == "Marketing a Prueba de Novatos")
+                            ? <MktIcon/>
+                            : (course.heading == "Edición de Videos para Viralizar")
+                                ? <VideoIcon/>
+                                : (course.heading == "Copywriting Persuasivo")
+                                    ? <CopywritingIcon/>
+                                    : (course.heading == "Maestría en Diseño Gráfico")
+                                        ? <GraphicDesignIcon/>
+                                        : (course.heading === "Instagram y Clientes")
+                                            ? <IgIcon/>
+                                            : (course.heading == "Conexión y Conversión en Linkedin")
+                                                ? <LinkedinIcon/>
+                                                : <SalesIcon/>
+                    }
+                </CourseItem>
+            ))
         }
     </ul>
     <div class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(300%_140%_at_50%_0%,#000_60%,#CFA116_100%)]

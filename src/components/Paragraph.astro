@@ -3,10 +3,10 @@ const { styles, isSmall = false } = Astro.props
 ---
 
 <p class={`
+    ${styles}
     ${!isSmall
         ? 'text-[0.9rem] sm:text-[1rem] lg:text-lg font-light '
         : 'text-md font-light'
-    }
-    ${styles}`}>
+    }`}>
     <slot/>
 </p>
