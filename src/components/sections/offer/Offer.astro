@@ -10,7 +10,6 @@ import SkillsArticle from "./SkillsArticle.astro";
 import SkillsImage from "./SkillsImage.astro";
 import PortalCircle from "@components/icons/PortalCircle.astro";
 import Discord from "@components/icons/Discord.astro";
-import Courses from "../courses/Courses.astro";
 
 ---
 <FullScreenSectionLayout>
@@ -27,15 +26,6 @@ import Courses from "../courses/Courses.astro";
                     Habilidades de alto valor
                 </Heading>
                 <section class="grow grid grid-cols-5 gap-3">
-                    <SkillsArticle grow={false}>
-                        <SkillsImage slot="skills-image" photo={MktImage} photoAlt="Marketing y creación de ofertas"/>
-                        <Heading slot="skills-title" level="h4" styles="text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-balance">
-                            Marketing y Creación de Ofertas
-                        </Heading>
-                        <Paragraph slot="skills-desc">
-                            Te enseñamos a empaquetar tu oferta para que al ofrecer tu servicio, sea muy dificil que tus potenciales clientes te digan que no.
-                        </Paragraph>
-                    </SkillsArticle>
                     <SkillsArticle grow={true}>
                         <SkillsImage slot="skills-image" photo={ClientesImage} photoAlt="Adquisición de clientes"/>
                         <Heading slot="skills-title" level="h4" styles="text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
@@ -43,6 +33,15 @@ import Courses from "../courses/Courses.astro";
                         </Heading>
                         <Paragraph slot="skills-desc">
                             Vas a aprender las habilidades más demandadas del mercado. Habilidades que te van a permitir generar tus primeros ingresos, y una vez que ya estés instaurado en el mercado, miles de dólares.
+                        </Paragraph>
+                    </SkillsArticle>
+                    <SkillsArticle grow={false}>
+                        <SkillsImage slot="skills-image" photo={MktImage} photoAlt="Marketing y creación de ofertas"/>
+                        <Heading slot="skills-title" level="h4" styles="text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-balance">
+                            Marketing y Creación de Ofertas
+                        </Heading>
+                        <Paragraph slot="skills-desc">
+                            Te enseñamos a empaquetar tu oferta para que al ofrecer tu servicio, sea muy dificil que tus potenciales clientes te digan que no.
                         </Paragraph>
                     </SkillsArticle>
                     <SkillsArticle grow={false}>

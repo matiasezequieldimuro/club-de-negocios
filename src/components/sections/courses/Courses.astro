@@ -21,35 +21,37 @@ const COURSES = [
     { heading: "Arte de Cierre de Ventas", text: "Entiende la psicología de la venta, los aspectos a tener en cuenta a la hora de vender y de subirte a una llamada de ventas, y cómo saltar objeciones como un maestro para cerrar la mayor cantidad de ventas posibles." }
 ]
 ---
-<article class="relative flex flex-col gap-10 px-[3rem] py-[2rem]">
-    <Heading level="h3" styles="mx-auto px-8 text-center text-white">
-        Cursos
-    </Heading>
-    <ul class="grid grid-cols-1 md:grid-cols-2 gap-5">
-        {
-            COURSES.map(course => (
-                <CourseItem heading={course.heading} text={course.text}>
-                    {
-                        (course.heading == "Ofertas del 1%")
-                        ? <OfferIcon/>
-                        : (course.heading == "Marketing a Prueba de Novatos")
-                            ? <MktIcon/>
-                            : (course.heading == "Edición de Videos para Viralizar")
-                                ? <VideoIcon/>
-                                : (course.heading == "Copywriting Persuasivo")
-                                    ? <CopywritingIcon/>
-                                    : (course.heading == "Maestría en Diseño Gráfico")
-                                        ? <GraphicDesignIcon/>
-                                        : (course.heading === "Instagram y Clientes")
-                                            ? <IgIcon/>
-                                            : (course.heading == "Conexión y Conversión en Linkedin")
-                                                ? <LinkedinIcon/>
-                                                : <SalesIcon/>
-                    }
-                </CourseItem>
-            ))
-        }
-    </ul>
+<article class="relative w-full flex items-center flex-col gap-10 px-[3rem] py-[2rem]">
+    <div class="w-full max-w-[1920px]">
+        <Heading level="h3" styles="mx-auto px-8 text-center text-white mb-8">
+            Cursos
+        </Heading>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-5">
+            {
+                COURSES.map(course => (
+                    <CourseItem heading={course.heading} text={course.text}>
+                        {
+                            (course.heading == "Ofertas del 1%")
+                            ? <OfferIcon/>
+                            : (course.heading == "Marketing a Prueba de Novatos")
+                                ? <MktIcon/>
+                                : (course.heading == "Edición de Videos para Viralizar")
+                                    ? <VideoIcon/>
+                                    : (course.heading == "Copywriting Persuasivo")
+                                        ? <CopywritingIcon/>
+                                        : (course.heading == "Maestría en Diseño Gráfico")
+                                            ? <GraphicDesignIcon/>
+                                            : (course.heading === "Instagram y Clientes")
+                                                ? <IgIcon/>
+                                                : (course.heading == "Conexión y Conversión en Linkedin")
+                                                    ? <LinkedinIcon/>
+                                                    : <SalesIcon/>
+                        }
+                    </CourseItem>
+                ))
+            }
+        </ul>
+    </div>
     <div class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(300%_140%_at_50%_0%,#000_60%,#CFA116_100%)]
     rotate-180"></div>
 </article>   

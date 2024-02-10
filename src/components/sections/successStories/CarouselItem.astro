@@ -1,0 +1,51 @@
+---
+import { Image } from "astro:assets"
+import AgustinImage from '@assets/images/casos-exito-agustin.jpg'
+import FranciscoImage from '@assets/images/casos-exito-francisco.jpg'
+import JoaquinImage from '@assets/images/casos-exito-joaquin.jpg'
+import LucianoImage from '@assets/images/casos-exito-luciano.jpg'
+import MauroImage from '@assets/images/casos-exito-mauro.jpg'
+import TomasImage from '@assets/images/casos-exito-tomas.jpg'
+import Heading from "@components/Heading.astro"
+import Paragraph from "@components/Paragraph.astro"
+
+interface Props {
+    title: string,
+    text: string,
+    imageUrl: string,
+    slug: string
+}
+
+const { title, text, imageUrl, slug } = Astro.props
+
+const getPhotoByPerson = (person: string) => {
+    switch(person) {
+        case "agustin":
+            return AgustinImage
+        case "francisco":
+            return FranciscoImage
+        case "joaquin":
+            return JoaquinImage
+        case "luciano":
+            return LucianoImage
+        case "mauro":
+            return MauroImage
+        default:
+            return TomasImage
+    }
+}
+---
+
+<div class="hidden w-full h-fit duration-1000 ease-in-out" data-carousel-item>
+    <div class="flex flex-col gap-5">
+        <Heading level="h4" styles="text-white text-center">
+            {title}
+        </Heading>
+        <div class="flex items-center lg:items-start flex-col lg:flex-row gap-10">
+            <Image src={getPhotoByPerson(slug)} alt="" width={140} height={140} class="order-2 lg:order-1 rounded-2xl" />
+            <Paragraph styles="text-center md:text-pretty order-1 lg:order-2">
+                {text}
+            </Paragraph>
+        </div>
+    </div>
+</div>

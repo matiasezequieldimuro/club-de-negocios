@@ -15,6 +15,8 @@ const I18N = getI18N({ currentLocale })
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{I18N?.AppTitle}</title>
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+
 	</head>
 	<body class="relative overflow-x-hidden">
 		<div class="min-h-screen w-full max-w-[1800px] mx-auto flex flex-col items-center">
@@ -24,35 +26,11 @@ const I18N = getI18N({ currentLocale })
 		</div>
 		<!-- <div class="absolute top-0 z-[-2] h-screen w-screen bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px]"></div> -->
 		<!-- <div class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_60%,#CFA116_100%)]"></div> -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
 	</body>
 </html>
 
 <style is:global>
-
-	:root {
-		color-scheme: dark;
-		--dark: #141414;
-		--light: #f1eeee;
-		--primary: #edb91c;
-		--primary_dark: #CFA116;
-		--secondary: #7AFC16;
-		--secondary_dark: #61C216;
-		scroll-behavior: smooth;
-	}
-
-	/****** GENERIC STYLES ******/
-	* {
-		outline: none;
-	}
-
-	h1, h2, h3, h4, h5, h6 {
-		font-family: "Bungee", sans-serif;
-		color: var(--primary);
-	}
-	p, a {
-		font-family: "Kanit", sans-serif;
-		color: var(--light);
-	}
 
 	/****** TIPOGRAPHY ******/
 	@font-face {
@@ -82,5 +60,30 @@ const I18N = getI18N({ currentLocale })
 		font-weight: 600;
 		font-style: normal;
 		font-display: swap;
+	}
+
+	:root {
+		color-scheme: dark;
+		--dark: #141414;
+		--light: #f1eeee;
+		--primary: #edb91c;
+		--primary_dark: #CFA116;
+		--secondary: #7AFC16;
+		--secondary_dark: #61C216;
+		scroll-behavior: smooth;
+	}
+
+	/****** GENERIC STYLES ******/
+	* {
+		outline: none;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-family: "Bungee", sans-serif;
+		color: var(--primary);
+	}
+	p, a {
+		font-family: "Kanit", sans-serif;
+		color: var(--light);
 	}
 </style>

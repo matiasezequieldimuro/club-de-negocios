@@ -27,6 +27,10 @@ const { heading, text} = Astro.props
 
 <style>
 
+.ApplicationsBox-List-Item summary {
+    margin-bottom: 0px; /* for more prominent move */
+    transition: margin 150ms ease-out;
+}
 .ApplicationsBox-List-Item summary:before {
     content: '';
     border-width: .4rem;
@@ -42,5 +46,8 @@ const { heading, text} = Astro.props
 /* THE MAGIC 🧙‍♀️ */
 .ApplicationsBox-List-Item details[open] > summary:before {
     transform: rotate(270deg);
+}
+.ApplicationsBox-List-Item details[open] summary {
+  margin-bottom: 10px;
 }
 </style>
