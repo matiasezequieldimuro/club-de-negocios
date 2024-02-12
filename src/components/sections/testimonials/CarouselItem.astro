@@ -1,0 +1,29 @@
+---
+import Heading from '@components/Heading.astro'
+import Paragraph from '@components/Paragraph.astro'
+import { Image } from 'astro:assets'
+import type { CollectionEntry } from 'astro:content'
+
+interface Props {
+    testimonial: CollectionEntry<"testimonials">
+}
+const { testimonial } = Astro.props
+---
+
+<div class="hidden w-full h-fit duration-1000 ease-in-out" data-carousel-item>
+    <div class="flex flex-col gap-5">
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-5">
+            <Image 
+                src={testimonial.data.img} width={80} height={80} alt={testimonial.data.name} 
+                style={"clip-path: circle(50% at 50% 50%);"} class="aspect-square" />
+            <Heading level="h4" styles="text-white text-center">
+                {testimonial.data.name}
+            </Heading>
+        </div>
+        <div class="flex items-center lg:items-start flex-col lg:flex-row gap-10">
+            <Paragraph styles="text-center sm:text-pretty order-1 lg:order-2">
+                {testimonial.body}
+            </Paragraph>
+        </div>
+    </div>
+</div>

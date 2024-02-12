@@ -1,0 +1,16 @@
+---
+import Heading from "@components/Heading.astro";
+import FullScreenSectionLayout from "@layouts/FullScreenSectionLayout.astro";
+import Carousel from "@components/sections/testimonials/Carousel.astro"
+---
+<FullScreenSectionLayout>
+    <div 
+        id="Testimonials" 
+        class="relative w-full h-auto max-w-[1920px] pt-[2rem] px-[1rem] sm:px-[2rem] flex flex-col gap-8 items-center justify-center">
+        <Heading level="h2" styles="mx-auto text-center">
+            Testimonios
+        </Heading>
+        <Carousel />
+    </div>
+    <div class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_60%,#CFA116_100%)] rotate-180"></div>
+</FullScreenSectionLayout>
