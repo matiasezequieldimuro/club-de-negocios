@@ -1,9 +1,59 @@
 ---
+import Heading from "@components/Heading.astro";
+import Paragraph from "@components/Paragraph.astro";
+import Config from "@components/icons/whyUs/Config.astro";
+import Brain from "@components/icons/whyUs/Brain.astro";
+import Community from "@components/icons/whyUs/Community.astro";
 import FullScreenSectionLayout from "@layouts/FullScreenSectionLayout.astro";
 
 ---
-<FullScreenSectionLayout>
-    <nav id="WhyUs">
-        WhyUs
-    </nav>
+<FullScreenSectionLayout styles="">
+    <div id="WhyUs" class="pb-[3rem] px-[4rem] flex flex-col items-center">
+        <Heading level="h2" styles="text-center">
+            ¿Por qué nosotros?
+        </Heading>
+        <article class="flex flex-col gap-4 mt-10 text-center max-w-[1000px]">
+            <Paragraph isSmall={false}>
+                Queremos que aprendas de personas que tienen los resultados que quieres obtener.
+            </Paragraph>
+            <Paragraph isSmall={false}>
+                Por eso, todos los maestros dentro de la Comunidad ya generan miles de dólares con los métodos que enseñamos.
+            </Paragraph>
+            <Paragraph isSmall={false}>
+                Por eso fundamos esta Comunidad, para que hagas lo mismo que hicimos nosotros, y para que aprendas de todos aquellos que lo hicieron con su respectiva habilidad.
+            </Paragraph>
+        </article>
+        <article class="flex flex-col gap-5 mt-16 max-w-[1000px]">
+            <div class="flex flex-col gap-5">
+                <div class="flex flex-row gap-5">
+                    <Config />
+                    <div class="flex flex-col ">
+                        <Heading level="h4">Sistemas probados</Heading>
+                        <Paragraph styles="text-pretty">
+                            Te vamos a mostrar los sistemas que aplicamos nosotros para llegar a tener los resultados que tenemos, y facturar $10.000, $40,000, y hasta $70.000 USD mensuales con tu negocia online.
+                        </Paragraph>
+                    </div>
+                </div>
+                <div class="flex flex-row gap-5">
+                    <Brain/>
+                    <div class="flex flex-col ">
+                        <Heading level="h4">Mentalidad Inquebrantable</Heading>
+                        <Paragraph styles="text-pretty">
+                            Entendemos que todo empieza con la mentalidad, y si no te puedes visualizar en la posición de alguien que genera miles de dólares por mes, nunca lo vas a lograr. Por ello, en la Comunidad nos apoyamos y alentamos mutuamente para actuar a pesar de la motivación, y darlo todo para alcanzar nuestros objetivos.
+                        </Paragraph>
+                    </div>
+                </div>
+                <div class="flex flex-row gap-5">
+                    <Community />
+                    <div class="flex flex-col ">
+                        <Heading level="h4">Comunidad y Entorno</Heading>
+                        <Paragraph styles="text-pretty">
+                            Te vas a rodear de cientas de personas que están en el mismo camino, no solo para que te motives viendo como otros iguales de capaces están generando miles de dólares mas; sino también para que puedas hacer amigos, negocios, y formar relaciones duraderas con personas que comparten tus objetivos en la vida.
+                        </Paragraph>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+    <div class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(80%_125%_at_50%_10%,#000_60%,#CFA116_100%)]"></div>
 </FullScreenSectionLayout>
