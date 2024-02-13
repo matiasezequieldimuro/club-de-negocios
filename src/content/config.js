@@ -18,7 +18,17 @@ const testimonialsCollection = defineCollection({
     })
 })
 
+const whoWeAreCollection = defineCollection({
+    type: 'data',
+    schema: ({ image }) => z.object({
+        fullname: z.string(),
+        photoPath: image(),
+        description: z.string()
+    })
+})
+
 export const collections = {
     successStories: successStoriesCollection,
-    testimonials: testimonialsCollection
+    testimonials: testimonialsCollection,
+    whoWeAre: whoWeAreCollection
 }

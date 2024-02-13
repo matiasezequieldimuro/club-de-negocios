@@ -8,15 +8,6 @@ import { getI18N } from "@i18n/i18n";
 const { currentLocale }  = Astro
 const I18N = getI18N({ currentLocale })
 
-// const LINKS = [
-//     { label: I18N?.Navbar_Offer, linkTo: 'Offer'},
-//     I18N?.Navbar_SuccessStories,
-//     I18N?.Navbar_Testimonials,
-//     I18N?.Navbar_WhyUs,
-//     I18N?.Navbar_WhoWeAre,
-//     I18N?.Navbar_Pricing,
-//     I18N?.Navbar_Questions
-// ]
 const LINKS = [
     { label: I18N?.Navbar_Offer, linkTo: 'Offer'},
     { label: I18N?.Navbar_SuccessStories, linkTo: 'SuccessStories'},
@@ -28,7 +19,7 @@ const LINKS = [
 ]
 ---
 
-<header class="navbar_scrolled fixed w-full px-[2rem] py-[.7rem] flex justify-between items-center z-50">
+<header class="navbar_scrolled fixed w-full px-[2rem] py-[.7rem] flex justify-between items-center z-40">
     <a href="#Hero">
         <Image src={BannerClub} width={150} height={100} alt="Logo" />
     </a>

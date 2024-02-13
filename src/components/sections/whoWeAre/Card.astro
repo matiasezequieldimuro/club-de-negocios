@@ -1,0 +1,44 @@
+---
+import { Image } from "astro:assets";
+import Paragraph from "@components/Paragraph.astro";
+import type { CollectionEntry } from "astro:content";
+import Modal from "./Modal.astro";
+
+interface Props {
+    owner: CollectionEntry<'whoWeAre'>
+}
+
+const { owner } = Astro.props
+---
+
+<article class="WhoWeAreCard group relative w-full max-w-[350px] h-[450px] rounded-lg overflow-hidden cursor-pointer" data-modal-target=`modal_${owner.id}` data-modal-toggle=`modal_${owner.id}` data-slug=`${owner.id}`>
+    <Image 
+        src={owner.data.photoPath} width={350} height={450} alt="." 
+        class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-grayscale duration-300 ease-in-out" />
+    <div class="
+        absolute left-0 bottom-0 w-full h-full p-5 z-30 flex items-end justify-center
+        bg-gradient-to-b from-transparent via-70% via-neutral-800/40 to-95% to-neutral-900/70
+        translate-y-full group-hover:-translate-y-0 transition-transform duration-500 
+    ">
+        <Paragraph>
+            {owner.data.fullname}
+        </Paragraph>
+    </div>
+</article>
+
+<Modal owner={owner} id={owner.id} />
+
+
+<!-- <script>
+    import { getEntry } from "astro:content"
+    const $aOwnerCards = Array.from(document.getElementsByClassName('WhoWeAreCard'))
+    $aOwnerCards.forEach(card => {
+        card.addEventListener('click', () => {
+            const oOwnerSlug = card.getAttribute("data-slug") ?? ''
+            getEntry('whoWeAre', oOwnerSlug).then((oOwnerData) => {
+                console.log(oOwnerData);
+                debugger
+            })
+        })
+    })
+</script> -->

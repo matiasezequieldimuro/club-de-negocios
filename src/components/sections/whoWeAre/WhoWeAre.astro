@@ -1,0 +1,19 @@
+---
+import Heading from "@components/Heading.astro";
+import FullScreenSectionLayout from "@layouts/FullScreenSectionLayout.astro";
+import Card from "./Card.astro";
+import { getCollection, type CollectionEntry } from "astro:content";
+
+const owners: CollectionEntry<'whoWeAre'>[] = (await getCollection('whoWeAre')).toReversed()
+---
+<FullScreenSectionLayout styles="">
+    <div id="WhoWeAre" class="w-full max-w-[1000px] py-10 px-10 flex flex-col gap-10">
+        <Heading level="h2" styles="text-center">
+            ¿Quiénes somos?
+        </Heading>
+        <section class="grow w-full flex flex-col md:flex-row justify-around items-center gap-8">
+            { owners.map(o => <Card owner={o} />) }
+        </section>
+    </div>
+    <div class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(80%_125%_at_50%_10%,#000_60%,#CFA116_100%)] rotate-180"></div>
+</FullScreenSectionLayout>
