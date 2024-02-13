@@ -4,7 +4,7 @@ import FullScreenSectionLayout from "@layouts/FullScreenSectionLayout.astro";
 import Card from "./Card.astro";
 import { getCollection, type CollectionEntry } from "astro:content";
 
-const owners: CollectionEntry<'whoWeAre'>[] = (await getCollection('whoWeAre')).toReversed()
+const owners: CollectionEntry<'whoWeAre'>[] = (await getCollection('whoWeAre')).reverse()
 ---
 <FullScreenSectionLayout styles="">
     <div id="WhoWeAre" class="w-full max-w-[1000px] py-10 px-10 flex flex-col gap-10">
