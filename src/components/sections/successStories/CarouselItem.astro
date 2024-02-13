@@ -16,7 +16,7 @@ interface Props {
     slug: string
 }
 
-const { title, text, imageUrl, slug } = Astro.props
+const { title, text, slug } = Astro.props
 
 const getPhotoByPerson = (person: string) => {
     switch(person) {
