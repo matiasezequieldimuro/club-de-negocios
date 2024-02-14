@@ -1,4 +1,9 @@
 ---
+interface Props {
+    text?: string,
+    linkTo?: string,
+    target?: string
+}
 const { text = 'Click Here  ', linkTo = '#', target = '_self' } = Astro.props
 ---
 

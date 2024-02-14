@@ -27,8 +27,19 @@ const whoWeAreCollection = defineCollection({
     })
 })
 
+const pricingCollection = defineCollection({
+    type: 'data',
+    schema: z.object({
+        title: z.string(),
+        description: z.string(),
+        price: z.string(),
+        callToAction: z.string()
+    })
+})
+
 export const collections = {
     successStories: successStoriesCollection,
     testimonials: testimonialsCollection,
-    whoWeAre: whoWeAreCollection
+    whoWeAre: whoWeAreCollection,
+    pricing: pricingCollection
 }

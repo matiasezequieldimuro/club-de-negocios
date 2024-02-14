@@ -1,0 +1,25 @@
+---
+import Button from "@components/Button.astro";
+import Heading from "@components/Heading.astro";
+import Paragraph from "@components/Paragraph.astro";
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+    pricing: CollectionEntry<'pricing'>
+}
+const { pricing } = Astro.props
+---
+
+<article class="max-w-[450px] flex flex-col items-center gap-3">
+    <Heading level="h4" styles="text-white">
+        { pricing.data.title }
+    </Heading>
+    <Paragraph styles="text-center grow">
+        { pricing.data.description }
+    </Paragraph>
+    <p>
+        <span class="text-3xl">{pricing.data.price.split("/")[0]}</span>
+        <span> {pricing.data.price.split("/")[1]}</span>
+    </p>
+    <Button text={pricing.data.callToAction} />
+</article>

@@ -1,0 +1,19 @@
+---
+import Heading from "@components/Heading.astro";
+import FullScreenSectionLayout from "@layouts/FullScreenSectionLayout.astro";
+import Card from "./Card.astro";
+import { getCollection, type CollectionEntry } from "astro:content";
+
+const pricings: CollectionEntry<'pricing'>[] = await getCollection('pricing')
+---
+<FullScreenSectionLayout styles="min-h-[550px] flex flex-col items-center">
+    <div id="Pricing" class="max-w-[1000px] py-9 px-10 flex flex-col items-center gap-7">
+        <Heading level="h2" styles="text-center">
+            ¿Estás Listo para escapar de la matrix?
+        </Heading>
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            { pricings.map(p => <Card pricing={p} />) }
+        </secti>
+    </div>
+    <div class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(130%_125%_at_50%_10%,#000_60%,#CFA116_100%)]"></div>
+</FullScreenSectionLayout>
