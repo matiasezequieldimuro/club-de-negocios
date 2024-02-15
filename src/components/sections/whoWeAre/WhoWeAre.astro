@@ -3,13 +3,17 @@ import Heading from "@components/Heading.astro";
 import FullScreenSectionLayout from "@layouts/FullScreenSectionLayout.astro";
 import Card from "./Card.astro";
 import { getCollection, type CollectionEntry } from "astro:content";
+import { getI18N } from "@i18n/i18n";
+
+const { currentLocale }  = Astro
+const I18N = getI18N({ currentLocale })
 
 const owners: CollectionEntry<'whoWeAre'>[] = (await getCollection('whoWeAre')).reverse()
 ---
 <FullScreenSectionLayout styles="">
     <div id="WhoWeAre" class="w-full max-w-[1000px] py-10 px-10 flex flex-col gap-10">
         <Heading level="h2" styles="text-center">
-            ¿Quiénes somos?
+            {I18N?.WhoWeAre_Title}
         </Heading>
         <section class="grow w-full flex flex-col md:flex-row justify-around items-center gap-8">
             { owners.map(o => <Card owner={o} />) }

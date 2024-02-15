@@ -1,3 +1,26 @@
-<footer class="w-full h-[150px] bg-dark">
-    Footer
+---
+import { getI18N } from "@i18n/i18n";
+
+const { currentLocale }  = Astro
+const I18N = getI18N({ currentLocale })
+---
+
+<footer class="relative w-screen h-[120px] flex flex-col items-center justify-center gap-2 bg-black">
+    <article>
+        <span class="font-bold me-1">®</span>
+        {I18N?.Footer_desc} 
+        <a class="ms-1" href="https://clubdenegocios.co/" target="_blank">Club de Negocios</a>
+    </article>
+    <article class="flex gap-3">
+        <div>
+            <a href="/" aria-label="Spanish link">
+                <img src="/espana.png" alt="Spanish link" class="w-8"/>
+            </a>
+        </div>
+        <div>
+            <a href="/en/" aria-label="English link">
+                <img src="/reino-unido.png" alt="English link" class="w-8"/>
+            </a>
+        </div>
+    </article>
 </footer>

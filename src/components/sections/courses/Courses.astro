@@ -10,40 +10,45 @@ import CopywritingIcon from "@components/icons/courses/Copywriting.astro"
 import IgIcon from "@components/icons/courses/Ig.astro"
 import SalesIcon from "@components/icons/courses/Ig.astro"
 
+import { getI18N } from "@i18n/i18n";
+
+const { currentLocale }  = Astro
+const I18N = getI18N({ currentLocale })
+
 const COURSES = [
-    { heading: "Ofertas del 1%", text: "Un paso a paso de cómo crear una oferta, qué deben tener en cuenta a la hora de estructurarla, y cómo venderla a más de $500 USD." },
-    { heading: "Marketing a Prueba de Novatos", text: "Aprende a crear Embudos de Venta, tanto para atraer orgánicamente a tus cleintes (en caso que crees contenido y estés creando una audiencia), como para ir a buscar a una audiencia fría que pueda estar interesada en tu producto o servicio." },
-    { heading: "Edición de Videos para Viralizar", text: "Una guía completa de cómo editar videos como un profesional, paso a paso, para que puedas ofrecer tus redes en redes sociales y trabajar con creadores de contenido interesados en ellos." },
-    { heading: "Copywriting Persuasivo", text: "Cómo escribir de manera persuasiva para captar la atención de las masas y convertir palabras en clientes." },
-    { heading: "Maestría en Diseño Gráfico", text: "Aprende a utilizar herramientas como Photoshop o Midjourney para hacerte un experto en diseños de todo tipo, y así ofrecer tus servicios de Branding a marcas personales y empresariales." },
-    { heading: "Instagram y Clientes", text: "Aprende a convertir seguidores, mensajes, y conversaciones en dinero, con nuestros métodos de adquisición de clientes por medio de Instagram." },
-    { heading: "Conexión y Conversión en Linkedin", text: "Aprende a crear un perfil exitoso, a crear listados con potenciales clientes que quieran adquirir tus servicios, y a ofrecerlo de la forma más efectiva posible." },
-    { heading: "Arte de Cierre de Ventas", text: "Entiende la psicología de la venta, los aspectos a tener en cuenta a la hora de vender y de subirte a una llamada de ventas, y cómo saltar objeciones como un maestro para cerrar la mayor cantidad de ventas posibles." }
+    { heading: I18N?.Courses_1_Heading, text: I18N?.Courses_1_Desc },
+    { heading: I18N?.Courses_2_Heading, text: I18N?.Courses_2_Desc },
+    { heading: I18N?.Courses_3_Heading, text: I18N?.Courses_3_Desc },
+    { heading: I18N?.Courses_4_Heading, text: I18N?.Courses_4_Desc },
+    { heading: I18N?.Courses_5_Heading, text:  I18N?.Courses_5_Desc },
+    { heading: I18N?.Courses_6_Heading, text:  I18N?.Courses_6_Desc },
+    { heading: I18N?.Courses_7_Heading, text: I18N?.Courses_7_Desc },
+    { heading: I18N?.Courses_8_Heading, text: I18N?.Courses_8_Desc }
 ]
 ---
 <article class="relative w-full flex items-center flex-col gap-10 px-[3rem] py-[2rem]">
     <div class="w-full max-w-[1920px]">
         <Heading level="h3" styles="mx-auto px-8 text-center text-white mb-8">
-            Cursos
+            {I18N?.Courses_Title}
         </Heading>
         <ul class="grid grid-cols-1 md:grid-cols-2 gap-5">
             {
                 COURSES.map(course => (
                     <CourseItem heading={course.heading} text={course.text}>
                         {
-                            (course.heading == "Ofertas del 1%")
+                            (course.heading == I18N?.Courses_1_Heading)
                             ? <OfferIcon/>
-                            : (course.heading == "Marketing a Prueba de Novatos")
+                            : (course.heading == I18N?.Courses_2_Heading)
                                 ? <MktIcon/>
-                                : (course.heading == "Edición de Videos para Viralizar")
+                                : (course.heading == I18N?.Courses_3_Heading)
                                     ? <VideoIcon/>
-                                    : (course.heading == "Copywriting Persuasivo")
+                                    : (course.heading == I18N?.Courses_4_Heading)
                                         ? <CopywritingIcon/>
-                                        : (course.heading == "Maestría en Diseño Gráfico")
+                                        : (course.heading == I18N?.Courses_5_Heading)
                                             ? <GraphicDesignIcon/>
-                                            : (course.heading === "Instagram y Clientes")
+                                            : (course.heading === I18N?.Courses_6_Heading)
                                                 ? <IgIcon/>
-                                                : (course.heading == "Conexión y Conversión en Linkedin")
+                                                : (course.heading == I18N?.Courses_7_Heading)
                                                     ? <LinkedinIcon/>
                                                     : <SalesIcon/>
                         }

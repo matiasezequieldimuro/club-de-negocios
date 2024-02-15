@@ -3,6 +3,11 @@ import FullScreenSectionLayout from "@layouts/FullScreenSectionLayout.astro";
 import Button from "@components/Button.astro";
 import Paragraph from "@components/Paragraph.astro";
 import Heading from "@components/Heading.astro";
+import { getI18N } from "@i18n/i18n";
+
+const { currentLocale }  = Astro
+const I18N = getI18N({ currentLocale })
+
 ---
 <FullScreenSectionLayout styles="h-screen max-h-[1500px]">
     <div id="Hero" class="
@@ -15,10 +20,8 @@ import Heading from "@components/Heading.astro";
             <Heading level="h1">
                 Club de <span class="text-white">Negocios</span>
             </Heading>
-            <Paragraph styles="max-w-[500px] md:max-w-[700px] lg:max-w-[650px] xl:max-w-[550px]">
-                Te introducimos a la Comunidad que te va a enseñar las estrategias de marketing, ventas, creación de contenido y negocios que te van a llevar a ganar <span class="text-primary">más de $1000 USD al mes, sin años de experiencia, título universitario o miles de seguidores.</span>
-            </Paragraph>
-            <Button text="Ingresar al club" linkTo="#Pricing" />
+            <Paragraph styles="max-w-[500px] md:max-w-[700px] lg:max-w-[650px] xl:max-w-[550px]" set:html={I18N?.Hero_Description}></Paragraph>
+            <Button text={I18N?.Hero_CTA} linkTo="#Pricing" />
         </article>
 
         <article class="w-[330px] sm:w-[375px] md:w-[500px]">

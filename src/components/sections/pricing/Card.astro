@@ -19,7 +19,7 @@ const { pricing } = Astro.props
     </Paragraph>
     <p>
         <span class="text-3xl">{pricing.data.price.split("/")[0]}</span>
-        <span> {pricing.data.price.split("/")[1]}</span>
+        <span> /{pricing.data.price.split("/")[1]}</span>
     </p>
     <Button text={pricing.data.callToAction} />
 </article>

@@ -1,10 +1,79 @@
 {
     "AppTitle": "Club de negocios | Community",
+
     "Navbar_Offer": "What we offer",
     "Navbar_SuccessStories": "Success stories",
     "Navbar_Testimonials": "Testimonials",
     "Navbar_WhyUs": "Why us",
     "Navbar_WhoWeAre": "Who we are",
     "Navbar_Pricing": "Pricing",
-    "Navbar_Questions": "Questions"
+    "Navbar_Questions": "Questions",
+
+    "Hero_Description": "We introduce you to the Community that will teach you the marketing, sales, content creation and business strategies that will lead you to earn <span class='text-primary'>more than $1000 USD per month, without years of experience, university degree or thousands of followers.</span>",
+    "Hero_CTA": "Join the club",
+
+    "Emphatize_Heading": "<span class='text-white'>FOR THOSE WHO ALWAYS LOOKED FOR A</span> ENVIRONMENT <span class='text-white'>THAT SUPPORTS THEM</span> <span class='text-white '>,</span> POWERFUL <span class='text-white'>AND LEADS THEM TO</span> REACH THEIR GOALS",
+    "Emphatize_P1": "It is not easy. It is difficult. It is going to require a lot of <span class='text-primary_dark font-normal'>effort, dedication and perseverance</span>. And for that reason, it is “too good to be true Because <span class='text-primary_dark font-normal'>only 1%</span> of the population is willing to work with effort, dedication and perseverance to achieve their goals.",
+    "Emphatize_P2": "Do you really want to change your life and have the results that no one else has?",
+    "Emphatize_P3": "It's a point of no return. Once you enter this world, there is no turning back. Understand that, at the end of the day, <span class='text-primary_dark font-normal'><span class= 'uppercase'>everything</span> depends on you</span>. The good, the bad, everything.",
+    "Emphatize_P4": "The results you see in all of these people are real. And even though the Matrix has made you believe that there are no other ways to make money, you can see with your own eyes: there are.",
+
+    "Offer_Title": "What we offer?",
+    "Offer_Skills_Title": "High value skills",
+    "Offer_Skills_1_Heading": "High income skills",
+    "Offer_Skills_1_Desc": "You will learn the most in-demand skills on the market. Skills that will allow you to generate your first income, and once you are established in the market, thousands of dollars.",
+    "Offer_Skills_2_Heading": "Marketing and offer creation",
+    "Offer_Skills_2_Desc": "We teach you how to package your offer so that when you offer your service, it is very difficult for your potential clients to say no.",
+    "Offer_Skills_3_Heading": "Customer acquisition",
+    "Offer_Skills_3_Desc": "Learn how to find potential clients who want to buy your services, the best techniques to capture their attention, and finally to get them to pay you.",
+    "Offer_Skills_4_Heading": "Closing sales",
+    "Offer_Skills_4_Desc": "Whenever you offer an expensive service, you have to understand the following: sales calls are going to be essential to close this type of sales. And therefore, it is essential that you understand how you should approach a call, and what techniques you should use to close them.",
+    "Offer_Community_Title": "Community",
+    "Offer_Community_Desc_1": "It's not all about money, that's why we're in <span class='text-primary'>community</span>.",
+    "Offer_Community_Desc_2": "In it we promote both <span class='text-primary'>financial</span> and <span class='text-primary'>personal</span> development of all members, and We prepare to have an <span class='text-primary'>unbreakable mentality</span>, <span class='text-primary'>abundant</span>, and prepared for anything.",
+    "Offer_Accesses_Title": "Accesses",
+    "Offer_Accesses_PortalCircle_Title": "Portal Circle",
+    "Offer_Accesses_PortalCircle_Desc": "In which you will have full access to all courses, discussion portals, challenges, much more within the Community.",
+    "Offer_Accesses_Discord_Title": "Discord Server",
+    "Offer_Accesses_Discord_Desc": "A Server in which you will meet all the members of the Community, to resolve all your questions, doubts, obtain clarity, make friends, partners, or for whatever you need.",
+
+    "Courses_Title": "Courses",
+    "Courses_1_Heading": "1% Offers",
+    "Courses_1_Desc": "A step by step on how to create an offer, what to take into account when structuring it, and how to sell it for more than $500 USD.",
+    "Courses_2_Heading": "Newbie-Proof Marketing",
+    "Courses_2_Desc": "Learn how to create Sales Funnels, both to organically attract your customers (in case you create content and are creating an audience), and to go find a cold audience that may be interested in your product or service .",
+    "Courses_3_Heading": "Editing Videos to Viralize",
+    "Courses_3_Desc": "A complete guide on how to edit videos like a professional, step by step, so you can offer your networks on social networks and work with content creators interested in them.",
+    "Courses_4_Heading": "Persuasive Copywriting",
+    "Courses_4_Desc": "How to write persuasively to capture the attention of the masses and convert words into customers.",
+    "Courses_5_Heading": "Master in Graphic Design",
+    "Courses_5_Desc": "Learn to use tools like Photoshop or Midjourney to become an expert in designs of all kinds, and thus offer your Branding services to personal and business brands.",
+    "Courses_6_Heading": "Instagram and Clients",
+    "Courses_6_Desc": "Learn how to convert followers, messages, and conversations into money, with our customer acquisition methods through Instagram.",
+    "Courses_7_Heading": "Connection and Conversion on Linkedin",
+    "Courses_7_Desc": "Learn how to create a successful profile, create lists with potential clients who want to purchase your services, and offer it in the most effective way possible.",
+    "Courses_8_Heading": "Art of Sales Closing",
+    "Courses_8_Desc": "Understand the psychology of selling, the aspects to take into account when selling and getting on a sales call, and how to jump over objections like a master to close as many sales as possible.",
+
+    "SuccessStories_Title": "Success stories",
+    
+    "Testimonials_Title": "Testimonials",
+
+    "WhyUs_Title": "Why us?",
+    "WhyUs_P1": "We want you to learn from people who have the results you want to achieve.",
+    "WhyUs_P2": "This is why all the teachers within the Community already generate thousands of dollars with the methods we teach.",
+    "WhyUs_P3": "That's why we founded this Community, so that you can do the same thing we did, and so that you can learn from all those who did it with their respective skill.",
+    "WhyUs_Item1_Heading": "Tested Systems",
+    "WhyUs_Item1_Description": "We are going to show you the systems that we apply to achieve the results we have, and invoice $10,000, $40,000, and up to $70,000 USD per month with your online business.",
+    "WhyUs_Item2_Heading": "Unbreakable Mentality",
+    "WhyUs_Item2_Description": "We understand that everything starts with the mindset, and if you can't visualize yourself in the position of someone who generates thousands of dollars per month, you will never achieve it. That's why in the Community we support and encourage each other to act despite motivation, and give everything to achieve our goals.",
+    "WhyUs_Item3_Heading": "Community and environment",
+    "WhyUs_Item3_Description": "You will surround yourself with hundreds of people who are on the same path, not only so that you can motivate yourself by seeing how others equally capable are generating thousands of dollars more; but also so that you can make friends, businesses, and Form lasting relationships with people who share your goals in life.",
+
+    "WhoWeAre_Title": "Who we are?",
+
+    "Pricing_Title": "Are you ready to escape the Matrix?",
+
+    "Footer_desc": "All rights reserved to"
+
 }

@@ -2,14 +2,17 @@
 import Heading from "@components/Heading.astro";
 import FullScreenSectionLayout from "@layouts/FullScreenSectionLayout.astro";
 import Carousel from "./Carousel.astro";
+import { getI18N } from "@i18n/i18n";
 
+const { currentLocale }  = Astro
+const I18N = getI18N({ currentLocale })
 ---
 <FullScreenSectionLayout styles="min-h-[80dvh]">
     <div 
         id="SuccessStories" 
         class="relative w-full h-auto max-w-[1920px] pt-[2rem] px-[2rem] flex flex-col gap-8 items-center justify-center">
         <Heading level="h2" styles="mx-auto text-center">
-            Casos de éxito
+            {I18N?.SuccessStories_Title}
         </Heading>
         <Carousel />
     </div>

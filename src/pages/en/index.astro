@@ -1,7 +1,27 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro'
+import Hero from '@components/sections/Hero.astro'
+import Emphatize from '@components/sections/Emphatize.astro'
+import Offer from '@components/sections/offer/Offer.astro'
+import SuccessStories from '@components/sections/successStories/SuccessStories.astro'
+import Testimonials from '@components/sections/testimonials/Testimonials.astro'
+import WhyUs from '@components/sections/WhyUs.astro'
+import WhoWeAre from '@components/sections/whoWeAre/WhoWeAre.astro'
+import Pricing from '@components/sections/pricing/Pricing.astro'
+// import Questions from '@components/sections/Questions.astro'
+import Courses from '@components/sections/courses/Courses.astro'
 ---
 <BaseLayout>
     <div class="flex-grow">
+        <Hero></Hero>
+        <Emphatize></Emphatize>
+        <Offer></Offer>
+        <Courses/>
+        <SuccessStories></SuccessStories>
+        <Testimonials></Testimonials>
+        <WhyUs></WhyUs>
+        <WhoWeAre></WhoWeAre>
+        <Pricing></Pricing>
+        <!-- <Questions></Questions> -->
     </div>
 </BaseLayout>

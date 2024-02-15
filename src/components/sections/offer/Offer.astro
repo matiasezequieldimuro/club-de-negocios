@@ -11,55 +11,59 @@ import SkillsImage from "./SkillsImage.astro";
 import PortalCircle from "@components/icons/PortalCircle.astro";
 import Discord from "@components/icons/Discord.astro";
 
+import { getI18N } from "@i18n/i18n";
+
+const { currentLocale }  = Astro
+const I18N = getI18N({ currentLocale })
 ---
 <FullScreenSectionLayout>
 
     <div id="Offer" class="w-full max-w-[1920px] py-[3rem] px-[2rem] sm:px-[4rem] flex flex-col gap-[2.5rem]">
         <Heading level="h2" styles="mx-auto px-8 text-center">
-            Qué ofrecemos
+            {I18N?.Offer_Title}
         </Heading>
 
         <section class="grid grid-cols-1 gap-[3rem]">
 
             <article class="flex flex-col gap-[2.5rem]">
                 <Heading level="h3" styles="mx-auto px-8 text-center text-white">
-                    Habilidades de alto valor
+                    {I18N?.Offer_Skills_Title}
                 </Heading>
                 <section class="grow grid grid-cols-5 gap-3">
                     <SkillsArticle grow={true}>
                         <SkillsImage slot="skills-image" photo={ClientesImage} photoAlt="Adquisición de clientes"/>
                         <Heading slot="skills-title" level="h4" styles="text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
-                            Habilidades de Altos Ingresos
+                            {I18N?.Offer_Skills_1_Heading}
                         </Heading>
                         <Paragraph slot="skills-desc">
-                            Vas a aprender las habilidades más demandadas del mercado. Habilidades que te van a permitir generar tus primeros ingresos, y una vez que ya estés instaurado en el mercado, miles de dólares.
+                            {I18N?.Offer_Skills_1_Desc}
                         </Paragraph>
                     </SkillsArticle>
                     <SkillsArticle grow={false}>
                         <SkillsImage slot="skills-image" photo={MktImage} photoAlt="Marketing y creación de ofertas"/>
                         <Heading slot="skills-title" level="h4" styles="text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-balance">
-                            Marketing y Creación de Ofertas
+                            {I18N?.Offer_Skills_2_Heading}
                         </Heading>
                         <Paragraph slot="skills-desc">
-                            Te enseñamos a empaquetar tu oferta para que al ofrecer tu servicio, sea muy dificil que tus potenciales clientes te digan que no.
+                            {I18N?.Offer_Skills_1_Desc}
                         </Paragraph>
                     </SkillsArticle>
                     <SkillsArticle grow={false}>
                         <SkillsImage slot="skills-image" photo={IngresosImage} photoAlt="Habilidades de altos ingresos"/>
                         <Heading slot="skills-title" level="h4" styles="text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.9)] ">
-                            Adquisición de Clientes
+                            {I18N?.Offer_Skills_3_Heading}
                         </Heading>
                         <Paragraph slot="skills-desc">
-                            Aprende como buscar potenciales clientes que quieran comprar tus servicios, las mejores técnicas para captar su atención, y finalmente para hacer que te paguen.
+                            {I18N?.Offer_Skills_3_Desc}
                         </Paragraph>
                     </SkillsArticle>
                     <SkillsArticle grow={true}>
                         <SkillsImage slot="skills-image" photo={VentasImage} photoAlt="Cierre de ventas"/>
                         <Heading slot="skills-title" level="h4" styles="text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
-                            Cierre de Ventas
+                            {I18N?.Offer_Skills_4_Heading}
                         </Heading>
                         <Paragraph slot="skills-desc">
-                            Siempre que ofrezcas un servicio caro, tienes que entender lo siguiente: las llamadas de venta van a ser indispensables para cerrar este tipo de ventas. Y por ello, es fundamental que entiendas cómo debes plantearte en una llamada, y qué técnicas debes utilizar para cerrarlas.
+                            {I18N?.Offer_Skills_4_Desc}
                         </Paragraph>
                     </SkillsArticle>
                 </section>
@@ -69,35 +73,39 @@ import Discord from "@components/icons/Discord.astro";
 
                 <article class="grow flex flex-col gap-3">
                     <Heading level="h3" styles="mx-auto px-8 text-center text-white">
-                        Comunidad
+                        {I18N?.Offer_Community_Title}
                     </Heading>
                     <div class="text-center">
-                        <Paragraph>
-                            No todo se trata de dinero, por eso estamos en <span class="text-primary">comunidad</span>.
-                        </Paragraph>
-                        <Paragraph>
-                            En la misma fomentamos el desarrollo tanto <span class="text-primary">financiero</span> como <span class="text-primary">personal</span> de todos los miembros, y los preparamos para tener una <span class="text-primary">mentalidad inquebrantable</span>, <span class="text-primary">abundante</span>, y preparada para lo que sea.
-                        </Paragraph>
+                        <Paragraph set:html={I18N?.Offer_Community_Desc_1}></Paragraph>
+                        <Paragraph set:html={I18N?.Offer_Community_Desc_2}></Paragraph>
                     </div>
                 </article>   
 
                 <article class="grow flex flex-col gap-3">
                     <Heading level="h3" styles="mx-auto px-8 text-center text-white">
-                        Accesos
+                        {I18N?.Offer_Accesses_Title}
                     </Heading>
                     <section class="grid grid-cols-1 gap-3">
                         <article class="flex gap-5">
                             <PortalCircle />
                             <div class="flex flex-col text-pretty">
-                                <Paragraph styles="font-normal text-primary_dark">Portal Circle</Paragraph>
-                                <Paragraph>En el que tendrás el acceso total a todos los cursos, los portales de discusiones, desafíos, mucho más dentro de la Comunidad.</Paragraph>
+                                <Paragraph styles="font-normal text-primary_dark">
+                                    {I18N?.Offer_Accesses_PortalCircle_Title}
+                                </Paragraph>
+                                <Paragraph>
+                                    {I18N?.Offer_Accesses_PortalCircle_Desc}
+                                </Paragraph>
                             </div>
                         </article>
                         <article class="flex gap-5">
                             <Discord/>
                             <div class="flex flex-col text-pretty">
-                                <Paragraph styles="font-normal text-primary_dark">Servidor de Discord</Paragraph>
-                                <Paragraph>Un Servidor en el cual te vas a encontrar con todos los miembros de la Comunidad, para resolver todas tus consultas, dudas, obtener claridad, hacer amigos, socios, o para lo que sea que necesites.</Paragraph>
+                                <Paragraph styles="font-normal text-primary_dark">
+                                    {I18N?.Offer_Accesses_Discord_Title}
+                                </Paragraph>
+                                <Paragraph>
+                                    {I18N?.Offer_Accesses_Discord_Desc}
+                                </Paragraph>
                             </div>
                         </article>
                     </section>

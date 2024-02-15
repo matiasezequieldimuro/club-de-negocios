@@ -39,6 +39,7 @@ const pricingCollection = defineCollection({
 
 export const collections = {
     successStories: successStoriesCollection,
+    successStories: successStoriesCollection,
     testimonials: testimonialsCollection,
     whoWeAre: whoWeAreCollection,
     pricing: pricingCollection
