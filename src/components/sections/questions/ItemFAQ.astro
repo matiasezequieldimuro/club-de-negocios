@@ -1,0 +1,53 @@
+---
+import Paragraph from "../../Paragraph.astro"
+
+const { heading, text} = Astro.props
+---
+
+<li class="ApplicationsBox-List-Item group">
+    <details class="
+        overflow-hidden rounded-lg bg-dark 
+        group-hover:shadow-[0px_0px_10px_2px_#CFA116] transition-shadow ease-out duration-150">
+        <summary class="relative flex items-center gap-3 p-3 cursor-pointer">
+            <slot/>
+            <Paragraph styles="">
+                {heading}
+            </Paragraph>
+        </summary>
+        <section class="ApplicationsBox-List-Item-ContentBox">
+            <article class="p-[1rem] pt-1 text-pretty">
+                <Paragraph isSmall={true}>
+                    {text}
+                </Paragraph>
+            </article>
+        </section>
+    </details>
+</li>
+
+
+<style>
+
+.ApplicationsBox-List-Item summary {
+    margin-bottom: 0px; /* for more prominent move */
+    transition: margin 150ms ease-out;
+}
+.ApplicationsBox-List-Item summary:before {
+    content: '';
+    border-width: .4rem;
+    border-style: solid;
+    border-color: transparent transparent transparent #fff;
+    position: absolute;
+    top: 1.3rem;
+    right: 1rem;
+    transform: rotate(90deg);
+    transform-origin: .2rem 50%;
+    transition: .25s transform ease;
+}
+/* THE MAGIC 🧙‍♀️ */
+.ApplicationsBox-List-Item details[open] > summary:before {
+    transform: rotate(270deg);
+}
+.ApplicationsBox-List-Item details[open] summary {
+  margin-bottom: 10px;
+}
+</style>

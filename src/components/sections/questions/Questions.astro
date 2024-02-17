@@ -1,0 +1,64 @@
+---
+import Button from "@components/Button.astro";
+import Heading from "@components/Heading.astro";
+import FullScreenSectionLayout from "@layouts/FullScreenSectionLayout.astro";
+import ItemFAQ from './ItemFAQ.astro'
+import Paragraph from "@components/Paragraph.astro";
+
+const preguntasFrecuentes = [
+    { heading: "¿Es esta comunidad para Principiantes?", text: "El contenido de la comunidad está destinado tanto a personas que recién empiezan en este mundo, como también a aquellos que ya están un poco más avanzados y quieren tener un empujón. Lo importante de la comunidad es el entorno. Es la posibilidad de rodearte de personas con las mismas aspiraciones y objetivos, y quizás con algunas que se encuentren un par de pasos más adelante." },
+    { heading: "¿Cómo hago valer mi dinero en la comunidad?", text: "Consume todo el contenido de los cursos, participa activamente en la comunidad, consulta todas tus dudas, y no dejes de iterar y trabajar en construir tu negocio. Es la única manera de triunfar." },
+    { heading: "¿Cómo cancelo mi suscripción?", text: "Muy simple. En tu perfil de Circle, en la sección de “Billing” vas a poder acceder a los datos de tu suscripción y cancelar la misma inmediatamente." },
+    { heading: "¿Ofrecen reembolsos", text: "No contamos con una política de reembolsos. Si no quieres volver a pagar la comunidad, puedes desuscribirte en cualquier momento." },
+    { heading: "¿Qué sucede si quiero desuscribirme de la comunidad?", text: "Eres libre de salir de la comunidad cuando lo desees. Ahora, si tu suscripción duró menos de un año, no podrás volver a ingresar por otro año a la misma." },
+    { heading: "¿Puedo convertirme en afiliado de la comunidad?", text: "Sí. El sistema todavía no está listo, pero vas a contar con un link de afiliados para que, por cada persona que ingrese a través de dicho link, se te acrediten $15 USD en tu cuenta de PayPal. Alentamos a todos a aprovechar este sistema ya que nos permite salir ganando a todos." }
+]
+---
+<FullScreenSectionLayout styles="min-h-screen">
+    <div id="Questions" class="w-full max-w-[1200px] flex flex-col gap-10 py-5 px-5">
+        <Heading level="h2" styles="mx-auto">
+            ¿Preguntas?
+        </Heading>
+        <section class="grid grid-cols-1 md:grid-cols-2 p-4 gap-x-10 gap-y-5">
+            <div class="flex flex-col gap-7">
+                <article>
+                    <Heading level="h3" styles="text-white">
+                        Contacto por mail
+                    </Heading>
+                    <form class="flex flex-col gap-3 my-4">
+                        <input type="text" id="address" class="border text-sm rounded-lg block w-full p-2.5 bg-transparent border-gray-600 placeholder-gray-400 text-white focus:ring-secondary_dark focus:border-secondary_dark" placeholder="johndoe@gmail.com" required />
+                        <textarea id="message" rows="4" class="block p-2.5 w-full text-sm rounded-lg border bg-transparent border-gray-600 placeholder-gray-400 text-white focus:ring-secondary_dark focus:border-secondary_dark max-h-[300px]" placeholder="Escribe tu mensaje aquí."></textarea>
+                        <div class="flex justify-end">
+                            <Button text="Enviar" />
+                        </div>
+                    </form>
+                </article>
+            </div>
+            <div class="flex flex-col">
+                <article>
+                    <Heading level="h3" styles="text-white">
+                        Encuentro virtual
+                    </Heading>
+                    <div class="flex flex-col gap-3 mt-3">
+                        <Paragraph>
+                            Sí tenes dudas, podés agendar una llamada con nuestro equipo comercial clickeando en 
+                            <a href="/" class="text-secondary">éste enlace</a>
+                            .
+                        </Paragraph>
+                    </div>
+                </article>
+            </div>
+            <div class="flex flex-col md:col-span-2">
+                <article>
+                    <Heading level="h3" styles="text-white">
+                        Dudas comunes
+                    </Heading>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3">
+                        { preguntasFrecuentes.map(p => <ItemFAQ heading={p.heading} text={p.text} />) }
+                    </ul>
+                </article>
+            </div>
+        </section>
+    </div>
+    <div class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(130%_125%_at_50%_10%,#000_60%,#CFA116_100%)] rotate-180"></div>
+</FullScreenSectionLayout>
