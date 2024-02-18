@@ -73,5 +73,25 @@
 
     "Pricing_Title": "¿Estás listo para escapar de la matrix?",
 
-    "Footer_desc": "Todos los derechos reservados a"
+    "Footer_desc": "Todos los derechos reservados a",
+
+    "Questions_Title": "¿Preguntas?",
+    "Questions_Mail_Heading": "Contacto por mail",
+    "Questions_Mail_Textarea": "Escribe tu mensaje aquí",
+    "Questions_Mail_Btn": "Enviar",
+    "Questions_Calendly_Heading": "Encuentro virtual",
+    "Questions_Calendly_Desc": "Si tenes dudas, podés agendar una llamada con nuestro equipo comercial clickeando en <a href='/' class='text-secondary'>éste enlace</a> vía Calendly.",
+    "Questions_Doubts_Title": "Frecuent questions",
+    "Questions_Doubts_1_Heading": "¿Es esta comunidad para Principiantes?",
+    "Questions_Doubts_1_Description": "El contenido de la comunidad está destinado tanto a personas que recién empiezan en este mundo, como también a aquellos que ya están un poco más avanzados y quieren tener un empujón. Lo importante de la comunidad es el entorno. Es la posibilidad de rodearte de personas con las mismas aspiraciones y objetivos, y quizás con algunas que se encuentren un par de pasos más adelante.",
+    "Questions_Doubts_2_Heading": "¿Cómo hago valer mi dinero en la comunidad?",
+    "Questions_Doubts_2_Description": "Consume todo el contenido de los cursos, participa activamente en la comunidad, consulta todas tus dudas, y no dejes de iterar y trabajar en construir tu negocio. Es la única manera de triunfar.",
+    "Questions_Doubts_3_Heading": "¿Cómo cancelo mi suscripción?",
+    "Questions_Doubts_3_Description": "Muy simple. En tu perfil de Circle, en la sección de “Billing” vas a poder acceder a los datos de tu suscripción y cancelar la misma inmediatamente.",
+    "Questions_Doubts_4_Heading": "¿Ofrecen reembolsos?",
+    "Questions_Doubts_4_Description": "No contamos con una política de reembolsos. Si no quieres volver a pagar la comunidad, puedes desuscribirte en cualquier momento.",
+    "Questions_Doubts_5_Heading": "¿Qué sucede si quiero desuscribirme de la comunidad?",
+    "Questions_Doubts_5_Description": "Eres libre de salir de la comunidad cuando lo desees. Ahora, si tu suscripción duró menos de un año, no podrás volver a ingresar por otro año a la misma.",
+    "Questions_Doubts_6_Heading": "¿Puedo convertirme en afiliado de la comunidad?",
+    "Questions_Doubts_6_Description": "Sí. El sistema todavía no está listo, pero vas a contar con un link de afiliados para que, por cada persona que ingrese a través de dicho link, se te acrediten $15 USD en tu cuenta de PayPal. Alentamos a todos a aprovechar este sistema ya que nos permite salir ganando a todos."
 }

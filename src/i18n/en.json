@@ -74,6 +74,26 @@
 
     "Pricing_Title": "Are you ready to escape the Matrix?",
 
-    "Footer_desc": "All rights reserved to"
+    "Footer_desc": "All rights reserved to",
+
+    "Questions_Title": "Questions?",
+    "Questions_Mail_Heading": "Contact by email",
+    "Questions_Mail_Textarea": "Enter your message here",
+    "Questions_Mail_Btn": "Send",
+    "Questions_Calendly_Heading": "Virtual meeting",
+    "Questions_Calendly_Desc": "If you have questions, you can schedule a call with our sales team by clicking on <a href='/' class='text-secondary'>this link</a> via Calendly.",
+    "Questions_Doubts_Title": "Frequent questions",
+    "Questions_Doubts_1_Heading": "Is this community for Beginners?",
+    "Questions_Doubts_1_Description": "The content of the community is intended both for people who are just starting out in this world, as well as for those who are already a little more advanced and want to get a boost. The important thing about the community is the environment. It is the possibility of surrounding yourself with people with the same aspirations and goals, and perhaps with some who are a couple of steps ahead.",
+    "Questions_Doubts_2_Heading": "How do I make my money count in the community?",
+    "Questions_Doubts_2_Description": "Consume all the content of the courses, actively participate in the community, ask all your questions, and don't stop iterating and working on building your business. It's the only way to succeed.",
+    "Questions_Doubts_3_Heading": "How do I cancel my subscription?",
+    "Questions_Doubts_3_Description": "Very simple. In your Circle profile, in the “Billing” section, you will be able to access your subscription details and cancel it immediately.",
+    "Questions_Doubts_4_Heading": "Do you offer refunds?",
+    "Questions_Doubts_4_Description": "We do not have a refund policy. If you no longer wish to pay for the community, you can unsubscribe at any time.",
+    "Questions_Doubts_5_Heading": "What happens if I want to unsubscribe from the community?",
+    "Questions_Doubts_5_Description": "You are free to leave the community whenever you want. Now, if your subscription lasted less than a year, you will not be able to re-enter the community for another year.",
+    "Questions_Doubts_6_Heading": "Can I become a community affiliate?",
+    "Questions_Doubts_6_Description": "Yes. The system is not ready yet, but you will have an affiliate link so that, for each person who enters through said link, $15 USD will be credited to your PayPal account. We encourage everyone to take advantage of this system since it allows us all to win."
 
 }
