@@ -44,8 +44,12 @@ const preguntasFrecuentes = [
                     <Heading level="h3" styles="text-white">
                         {I18N?.Questions_Calendly_Heading}
                     </Heading>
-                    <div class="flex flex-col gap-3 mt-3">
-                        <Paragraph set:html={I18N?.Questions_Calendly_Desc}></Paragraph>
+                    <div class="mt-3">
+                        <Paragraph>
+                            {I18N?.Questions_Calendly_Desc}
+                            <a class='text-secondary' href='' onclick=`Calendly.initPopupWidget({url: 'https://calendly.com/matiasdimurodev?hide_gdpr_banner=1&primary_color=fcd705'});return false;`> link</a>
+                            via Calendly.
+                        </Paragraph>                        
                     </div>
                 </article>
             </div>

@@ -15,7 +15,10 @@ const I18N = getI18N({ currentLocale })
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{I18N?.AppTitle}</title>
+		<!-- Flowbite Carousel -->
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+		<!-- Calendly -->
+		<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 	</head>
 	<body class="relative overflow-x-hidden">
 		<div class="min-h-screen w-full max-w-[1800px] mx-auto flex flex-col items-center">
@@ -23,7 +26,10 @@ const I18N = getI18N({ currentLocale })
 			<slot />
 			<Footer />
 		</div>
+		<!-- Flowbite Carousel -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+		<!-- Calendly -->
+		<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 	</body>
 </html>
 

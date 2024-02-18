@@ -81,7 +81,8 @@
     "Questions_Mail_Textarea": "Enter your message here",
     "Questions_Mail_Btn": "Send",
     "Questions_Calendly_Heading": "Virtual meeting",
-    "Questions_Calendly_Desc": "If you have questions, you can schedule a call with our sales team by clicking on <a href='/' class='text-secondary'>this link</a> via Calendly.",
+    "Questions_Calendly_Desc": "If you have questions, you can schedule a call with our sales team by clicking on this ",
+    
     "Questions_Doubts_Title": "Frequent questions",
     "Questions_Doubts_1_Heading": "Is this community for Beginners?",
     "Questions_Doubts_1_Description": "The content of the community is intended both for people who are just starting out in this world, as well as for those who are already a little more advanced and want to get a boost. The important thing about the community is the environment. It is the possibility of surrounding yourself with people with the same aspirations and goals, and perhaps with some who are a couple of steps ahead.",
